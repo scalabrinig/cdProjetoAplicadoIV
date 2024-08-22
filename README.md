@@ -14,10 +14,14 @@
   <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_14.svg" width="10%" align="center"/>
   <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_15.svg" width="10%" align="center"/>
 </p>
+
 **Cronograma de entregas**:
 
 _Etapa 1_: 
+
 _Etapa 2_:
+
 _Etapa 3_:
+
 _Etapa 4_:
 
