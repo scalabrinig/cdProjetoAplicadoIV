@@ -17,11 +17,13 @@
 
 **Cronograma de entregas**:
 
-_Etapa 1_: 
+_Etapa 1_: Definição do projeto e equipe (06/09)
 
-_Etapa 2_:
+_Etapa 2_: Referencial Teórico e Cronograma (30/09)
 
-_Etapa 3_:
+_Etapa 3_: Implementação Parcial (28/10)
 
-_Etapa 4_:
+_Etapa 4_: Implementação e Entrega Final (18/11)
 
+
+**Trabalhos da turma 2024/02**:
