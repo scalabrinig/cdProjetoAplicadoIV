@@ -15,6 +15,12 @@
   <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_15.svg" width="10%" align="center"/>
 </p>
 
+
+**Recomendações e instruções para a elaboração do projeto**:
+
+Veja as [instruções](https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/4deaf6fa8754c4ab18d521f08cf32c6660a313ea/projeto/cd_projeto_aplicado_IV.ipynb) para a elaboração do projeto
+
+
 **Cronograma de entregas**:
 
 _Etapa 1_: Definição do projeto e equipe (06/09)
