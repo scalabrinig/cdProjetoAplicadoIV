@@ -7,8 +7,13 @@
 
 **ODS**: Nesse semestre, o tema deve ser relacionado aos ODS do eixo de meio ambiente: 6 - água potável e saneamento; 7 - energia limpa e acessível; 13 - ação contra a mudança global do clima; 14 - vida na água; 15 - vida terrestre.
 
-<img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_06.svg" width="10%" align="center"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_07.svg" width="10%" align="center"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_13.svg" width="10%" align="center"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_14.svg" width="10%" align="center"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_15.svg" width="10%" align="center"/>
-
+<p align="center">
+  <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_06.svg" width="10%" align="center"/>
+  <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_07.svg" width="10%" align="center"/>
+  <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_13.svg" width="10%" align="center"/>
+  <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_14.svg" width="10%" align="center"/>
+  <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_15.svg" width="10%" align="center"/>
+</p>
 **Cronograma de entregas**:
 
 _Etapa 1_: 
