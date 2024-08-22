@@ -18,7 +18,7 @@
 
 **Recomendações e instruções para a elaboração do projeto**:
 
-Veja as [instruções](https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/4deaf6fa8754c4ab18d521f08cf32c6660a313ea/projeto/cd_projeto_aplicado_IV.ipynb) para a elaboração do projeto
+Veja as [instruções](https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/96a35bd972aa43bc22dda9bfeda3c7e0a4afa720/projeto/cd_projeto_aplicado_IV.ipynb) para a elaboração do projeto
 
 
 **Cronograma de entregas**:
