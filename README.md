@@ -1,4 +1,4 @@
-  <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/figuras/mackenzie.jpg" width="25%" align="right"/>
+<img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/052fdb52ae91ec7ce4ad04086f96803e9f1073d0/figuras/mackenzie_logo.jpg" width="25%" align="right"/>
 
 
 # **PROJETO APLICADO IV - Ciência de Dados EaD - 2024/02**
@@ -7,7 +7,7 @@
 
 **ODS**: Nesse semestre, o tema deve ser relacionado aos ODS do eixo de meio ambiente: 6 - água potável e saneamento; 7 -energia limpa e acessível; 13 - ação contra a mudança global do clima; 14 - vida na água; 15 - vida terrestre.
 
-<img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/figuras/SDG-6.svg" width="25%" align="right"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/figuras/SDG-7.svg" width="25%" align="right"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/figuras/SDG-13.svg" width="25%" align="right"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/figuras/SDG-14.svg" width="25%" align="right"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/figuras/SDG-15.svg" width="25%" align="right"/>
+<img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/052fdb52ae91ec7ce4ad04086f96803e9f1073d0/figuras/SDG-6.svg" width="25%" align="right"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/052fdb52ae91ec7ce4ad04086f96803e9f1073d0/figuras/SDG-7.svg" width="25%" align="right"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/052fdb52ae91ec7ce4ad04086f96803e9f1073d0/figuras/SDG-13.svg" width="25%" align="right"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/052fdb52ae91ec7ce4ad04086f96803e9f1073d0/figuras/SDG-14.svg" width="25%" align="right"/><img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/052fdb52ae91ec7ce4ad04086f96803e9f1073d0/figuras/SDG-15.svg" width="25%" align="right"/>
 
 **Cronograma de entregas**:
 
