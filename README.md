@@ -5,7 +5,7 @@
 
 **Objetivo**: Desenvolver um produto analítico envolvendo séries temporais. O projeto deve incluir as fases de concepção, implementação e apresentação do projeto para um cliente. Escolher um tema em que os dados são organizados em formato de série temporal.
 
-**ODS**: Nesse semestre, o tema deve ser relacionado aos ODS: 8 - emprego digno e crescimento econômico; 11 - cidades e comunidades sustentáveis; 16 - paz, justiça e instituições fortes.
+**ODS**: Nesse semestre, o tema deve ser relacionado aos ODS: 8 - trabalho descente e crescimento econômico; 11 - cidades e comunidades sustentáveis; 16 - paz, justiça e instituições fortes.
 
 <p align="center">
   <img src="https://github.com/scalabrinig/cdProjetoAplicadoIV/blob/1cbc699eb401a201e2b313d97f3eee6981ddcaea/figuras/sdg_08.svg" width="10%" align="center"/>
