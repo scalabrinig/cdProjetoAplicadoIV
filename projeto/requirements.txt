@@ -5,3 +5,6 @@ pyarrow
 openpyxl
 matplotlib
 seaborn
+numpy
+statsmodels
+scipy
