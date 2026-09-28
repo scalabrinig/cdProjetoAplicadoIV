@@ -15,7 +15,7 @@ def exception_trackers(exc):
             break
     
     
-    # 3. Pega o frame pelo index (onde o erro aconteceu de verdade)
+    # 2. Pega o frame pelo index (onde o erro aconteceu de verdade)
     ultima_linha_erro = tb[error_index]
     
     arquivo = ultima_linha_erro.filename

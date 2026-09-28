@@ -1,0 +1,1 @@
+""" Funções de criação de gráficos estáticos, principalmente para notebook"""

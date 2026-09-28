@@ -3,3 +3,8 @@ py7zr
 requests
 pyarrow
 openpyxl
+matplotlib
+seaborn
+numpy
+statsmodels
+scipy

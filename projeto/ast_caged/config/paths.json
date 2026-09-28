@@ -3,6 +3,7 @@
     "raw_caged": "data/raw/caged",
     "extracted_caged": "data/extracted/caged",
     "processed_caged": "data/processed/caged",
+    "ready_caged": "data/ready/caged",
     "catalog_caged": "data/catalog/caged"
   },
   "config": {

@@ -79,7 +79,12 @@ def resolve_project_path(relative_path: str) -> Path:
 
 
 def create_directories(paths: dict[str, Path]) -> None:
-    for key in ("raw_caged", "extracted_caged", "processed_caged"):
+    for key in (
+        "raw_caged",
+        "extracted_caged",
+        "processed_caged",
+        "ready_caged",
+    ):
         paths[key].mkdir(parents=True, exist_ok=True)
 
 
@@ -279,6 +284,7 @@ def load_settings() -> tuple[dict[str, Path], dict[str, Any]]:
         "raw_caged": resolve_project_path(data_paths["raw_caged"]),
         "extracted_caged": resolve_project_path(data_paths["extracted_caged"]),
         "processed_caged": resolve_project_path(data_paths["processed_caged"]),
+        "ready_caged": resolve_project_path(data_paths["ready_caged"]),
         "etl_filter": resolve_project_path(
             paths_config["config"]["etl_filter"]
         ),
@@ -782,7 +788,8 @@ def merge_time_series(
                 drop=True
             )
 
-            merged_output_path = paths["processed_caged"] / f"caged_mov_{fragment_id}.{output_format}"
+            merged_output_path = paths["ready_caged"] / f"caged_mov_{fragment_id}.{output_format}"
+            merged_output_path.parent.mkdir(parents=True, exist_ok=True)
 
             if output_format == "parquet":
                 merged_dataframe.to_parquet(merged_output_path, index=False)
@@ -888,12 +895,14 @@ def main() -> None:
     raw_caged = resolve_project_path(paths_config["data"]["raw_caged"])
     extracted_caged = resolve_project_path(paths_config["data"]["extracted_caged"])
     processed_caged = resolve_project_path(paths_config["data"]["processed_caged"])
+    ready_caged = resolve_project_path(paths_config["data"]["ready_caged"])
     etl_filter_path = resolve_project_path(paths_config["config"]["etl_filter"])
 
     paths = {
         "raw_caged": raw_caged,
         "extracted_caged": extracted_caged,
         "processed_caged": processed_caged,
+        "ready_caged": ready_caged,
         "etl_filter": etl_filter_path,
     }
 
