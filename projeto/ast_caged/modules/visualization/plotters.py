@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import seaborn as sns
 import pandas as pd
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
 
 def plot_series(
@@ -99,69 +100,75 @@ def plot_series(
 
     return fig, ax
 
-# def plot_series(df, title=None, xlabel=None, ylabel="Valor", figsize=(14, 6), grid=True):
-#     """
-#     Plota todas as colunas numéricas de um DataFrame no mesmo gráfico.
 
-#     Parâmetros
-#     ----------
-#     df : pd.DataFrame
-#         DataFrame cujo índice representa o tempo e cada coluna é uma série temporal.
-#     title : str, optional
-#         Título do gráfico.
-#     xlabel : str, optional
-#         Rótulo do eixo x. Se None, usa o nome do índice ou 'Tempo'.
-#     ylabel : str, optional
-#         Rótulo do eixo y.
-#     figsize : tuple, optional
-#         Tamanho da figura, por padrão (14, 6).
-#     grid : bool, default=True
-#         Se True, adiciona uma grade vertical sutil nos ticks do tempo.
-#     """
-#     dados = df.select_dtypes(include="number").copy()
 
-#     if dados.empty:
-#         raise ValueError("O DataFrame não possui colunas numéricas para plotar.")
+def prot_components(componentes: pd.DataFrame, titulo: str | None = None):
+    colunas = componentes.select_dtypes(include="number").columns
 
-#     fig, ax = plt.subplots(figsize=figsize)
+    if len(colunas) == 0:
+        raise ValueError("O DataFrame não contém colunas numéricas.")
 
-#     for coluna in dados.columns:
-#         sns.lineplot(
-#             data=dados,
-#             x=dados.index,
-#             y=coluna,
-#             ax=ax,
-#             label=coluna
-#         )
+    fig, eixos = plt.subplots(
+        nrows=len(colunas),
+        ncols=1,
+        figsize=(12, 2.8 * len(colunas)),
+        sharex=True,
+        squeeze=False,
+    )
 
-#     # Remove as molduras superior e direita
-#     sns.despine(ax=ax, top=True, right=True)
+    for eixo, coluna in zip(eixos[:, 0], colunas):
+        eixo.plot(componentes.index, componentes[coluna], linewidth=1.4)
+        eixo.set_title(str(coluna).capitalize())
+        eixo.grid(alpha=0.3)
 
-#     # Inclina os ticks do eixo x
-#     ax.tick_params(axis="x", rotation=40)
+        eixo.spines["top"].set_visible(False)
+        eixo.spines["right"].set_visible(False)
 
-#     # Grade exclusivamente vertical, vinculada aos ticks principais do eixo x.
-#     if grid:
-#         ax.grid(
-#             axis="x",
-#             which="major",
-#             color="#818080FF",
-#             linestyle="--",
-#             linewidth=0.7,
-#             alpha=0.65
-#         )
+    if titulo:
+        fig.suptitle(titulo)
+        fig.tight_layout(rect=(0, 0, 1, 0.96))
+    else:
+        fig.tight_layout()
 
-#         # Evita qualquer grade horizontal.
-#         ax.grid(axis="y", visible=False)
+    plt.show()
+    return fig, eixos
 
-#         # Coloca a grade atrás das linhas das séries.
-#         ax.set_axisbelow(True)
 
-#     ax.set_title(title or "Séries temporais")
-#     ax.set_xlabel(xlabel or dados.index.name or "Tempo")
-#     ax.set_ylabel(ylabel)
+# ============================================================
+# 23. FUNÇÃO DE ANÁLISE DE AUTOCORRELAÇÃO (ACF E PACF)
+# ============================================================
 
-#     ax.legend(title="Série", bbox_to_anchor=(1.02, 1), loc="upper left")
-#     fig.tight_layout()
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
-#     return fig, ax
+
+def plotar_acf_pacf(
+    serie: pd.Series, lags: int = 24, titulo: str = "", diferenciar: bool = False
+    ):
+    """Plota as funções de Autocorrelação (ACF) e Autocorrelação Parcial (PACF)
+    para a série em nível ou diferenciada.
+    """
+    dados_analise = serie.diff().dropna() if diferenciar else serie.dropna()
+
+    sufixo = " (1ª Diferença)" if diferenciar else " (Nível)"
+    titulo_completo = f"{titulo}{sufixo}" if titulo else f"Série{sufixo}"
+
+    fig, axes = plt.subplots(1, 2, figsize=(15, 4.5))
+
+    # 1. Gráfico de Autocorrelação (ACF)
+    plot_acf(dados_analise, lags=lags, ax=axes[0], alpha=0.05)
+    [0].set_title(f"ACF: {titulo_completo}", fontsize=11, fontweight="bold")
+    [0].set_xlabel("Defasagens (Lags)", fontsize=10)
+    axes[0].set_ylabel("Autocorrelação", fontsize=10)
+    axes[0].grid(alpha=0.3)
+
+    # 2. Gráfico de Autocorrelação Parcial (PACF)
+    # Usamos method='ywm' (Yule-Walker modificado) para estabilidade
+    plot_pacf(dados_analise, lags=lags, ax=axes[1], alpha=0.05, method="ywm")
+    axes[1].set_title(f"PACF: {titulo_completo}", fontsize=11, fontweight="bold")
+    axes[1].set_xlabel("Defasagens (Lags)", fontsize=10)
+    axes[1].set_ylabel("Autocorrelação Parcial", fontsize=10)
+    axes[1].grid(alpha=0.3)
+
+    plt.tight_layout()
+    plt.show()

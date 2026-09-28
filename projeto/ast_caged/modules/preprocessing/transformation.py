@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import minimize_scalar
 from scipy.stats import boxcox
+from statsmodels.tsa.seasonal import STL
 
 
 def lambda_guerrero(
@@ -81,3 +82,28 @@ def max_min(serie: pd.Series):
     if amplitude == 0:
         raise ValueError("Não é possível transformar uma série constante.")
     return (serie-serie.min()) / amplitude
+
+
+
+def decomposing(serie: pd.Series, periodo: int = 12) -> pd.DataFrame:
+    if not isinstance(serie, pd.Series):
+        raise TypeError("Informe uma pd.Series.")
+    if len(serie) < 2 * periodo:
+        raise ValueError("A série precisa ter pelo menos dois ciclos completos.")
+    if not serie.index.is_monotonic_increasing:
+        raise ValueError("O índice deve estar em ordem cronológica.")
+
+    valores = serie.to_numpy(dtype=float)
+    if not np.isfinite(valores).all():
+        raise ValueError("A série não pode conter valores ausentes ou infinitos.")
+
+    resultado = STL(serie, period=periodo, robust=True).fit()
+
+    return pd.DataFrame(
+        {
+            "tendencia": resultado.trend,
+            "sazonalidade": resultado.seasonal,
+            "residuo": resultado.resid,
+        },
+        index=serie.index,
+    )
