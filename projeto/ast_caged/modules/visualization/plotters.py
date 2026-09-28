@@ -134,13 +134,6 @@ def prot_components(componentes: pd.DataFrame, titulo: str | None = None):
     return fig, eixos
 
 
-# ============================================================
-# 23. FUNÇÃO DE ANÁLISE DE AUTOCORRELAÇÃO (ACF E PACF)
-# ============================================================
-
-import matplotlib.pyplot as plt
-from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
-
 
 def plotar_acf_pacf(
     serie: pd.Series, lags: int = 24, titulo: str = "", diferenciar: bool = False
@@ -150,15 +143,15 @@ def plotar_acf_pacf(
     """
     dados_analise = serie.diff().dropna() if diferenciar else serie.dropna()
 
-    sufixo = " (1ª Diferença)" if diferenciar else " (Nível)"
+    sufixo = " (1ª Diferença)" if diferenciar else ""
     titulo_completo = f"{titulo}{sufixo}" if titulo else f"Série{sufixo}"
 
     fig, axes = plt.subplots(1, 2, figsize=(15, 4.5))
 
     # 1. Gráfico de Autocorrelação (ACF)
     plot_acf(dados_analise, lags=lags, ax=axes[0], alpha=0.05)
-    [0].set_title(f"ACF: {titulo_completo}", fontsize=11, fontweight="bold")
-    [0].set_xlabel("Defasagens (Lags)", fontsize=10)
+    axes[0].set_title(f"ACF: {titulo_completo}", fontsize=11, fontweight="bold")
+    axes[0].set_xlabel("Defasagens (Lags)", fontsize=10)
     axes[0].set_ylabel("Autocorrelação", fontsize=10)
     axes[0].grid(alpha=0.3)
 
